@@ -1,4 +1,5 @@
 module.exports = [
-  'minimum'
+  'base'
+  'images'
   'html-index'
 ]

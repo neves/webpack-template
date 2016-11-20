@@ -9,10 +9,11 @@ module.exports =
   output:
     path: resolve __dirname, '../dist' # must be absolute
     filename: '[name].[chunkhash:7].js'
-    publicPath: '/'
-  # devtool: 'source-map'
-    # resolve:
-    #   extensions: ['.js', '.coffee', '.vue']
+  resolve:
+    modules: [
+      'node_modules'
+      resolve __dirname, '../src'
+    ]
   plugins: [
     new webpack.DefinePlugin
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)

@@ -15,11 +15,16 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
     "nodemon": "^1.11.0",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.27",
     "webpack-dev-server": "^2.1.0-beta.11",
     "webpack-merge": "^0.17.0"
+  },
+  "dependencies": {
+    "reset-css": "^2.2.0"
   }
 }

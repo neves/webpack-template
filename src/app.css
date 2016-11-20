@@ -1,8 +1,10 @@
-body {
-  background-color: silver;
-}
+/*@import url(~reset-css);*/
 
-h1 {
-  background-color: lightgreen;
-  border-radius: 10px;
+body {
+  margin: 30px;
+  background-color: silver;
+  background-image: url(assets/home.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
 }
