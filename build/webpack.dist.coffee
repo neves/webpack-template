@@ -1,5 +1,5 @@
 module.exports = [
-  'minimum'
+  'common'
   'clean-dist'
   'copy-static'
   'css-dist'

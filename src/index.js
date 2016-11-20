@@ -1,3 +1,4 @@
+console.clear()
 const ENV = process.env.NODE_ENV
 const DEVELOPMENT = ENV === 'development'
 console.log('index.js', ENV, DEVELOPMENT)

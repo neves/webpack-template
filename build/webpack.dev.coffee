@@ -1,5 +1,5 @@
 module.exports = [
-  'minimum'
+  'common'
   'css-dev'
   'server'
 ]

@@ -1,24 +1,44 @@
-// 'webpack-merge@^0.17.0', 'better-log@^1.3.3',
+// 'webpack-merge@^0.17.0', 'better-log@^1.3.3', "coffee-script": "^1.11.1", "nodemon": "^1.11.0"
 require('coffee-script/register')
-const merge = require('webpack-merge').smart
+const WebpackMerge = require('webpack-merge')
+const log = require('better-log').setConfig({depth: 5})
+
+function merge(a, b) {
+  if (b instanceof Function) {
+    b = b(a)
+  }
+  return WebpackMerge.smart(a, b)
+}
 
 function p (data) {
-  console.log()
-  require('better-log').setConfig({depth: 5})(data)
-  console.log()
+  console.log("\n--------------------------------------------------------------------------------\n")
+  log(data)
+  console.log("\n--------------------------------------------------------------------------------\n")
   return data
 }
 
-module.exports = env => {
-  const configFile = `./build/webpack.${env}.coffee`
-  const modules = require(configFile)
-  var config = {}
+function concat(modules) {
+  var confs = []
   for (let module of modules) {
-    let current = require(`./build/${module}`)
-    if (current instanceof Function) {
-      current = current(config)
+    let conf = require(`./build/${module}`)
+    if (Array.isArray(conf)) {
+      conf = concat(conf)
+      confs = Object.assign(confs, conf)
+    } else {
+      confs[module] = conf
     }
-    config = merge(config, current)
+  }
+  return confs
+}
+
+module.exports = env => {
+  const configFile = `./build/webpack.${env}`
+  const modules = require(configFile)
+  let confs = concat(modules)
+  var config = {}
+  for (let [name, conf] of Object.entries(confs)) {
+    log(name)
+    config = merge(config, conf)
   }
   delete config.dependencies
   return p(config)
