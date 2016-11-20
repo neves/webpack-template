@@ -1,0 +1,15 @@
+{
+  "verbose": true,
+  "ext": "js json coffee",
+  "watch": [
+    "build/",
+    ".babelrc",
+    "package.json",
+    "nodemon.json",
+    "yarn.lock"
+  ],
+  "env": {
+    "NODE_ENV": "development",
+    "DEBUG": "true"
+  }
+}

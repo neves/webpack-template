@@ -1,0 +1,22 @@
+{
+  "name": "vwpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon node_modules/.bin/webpack-dev-server -- --hot --env dev || true",
+    "dist": "webpack --env dist || true"
+  },
+  "devDependencies": {
+    "better-log": "^1.3.3",
+    "clean-webpack-plugin": "^0.1.14",
+    "coffee-script": "^1.11.1",
+    "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "nodemon": "^1.11.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.1.0-beta.27",
+    "webpack-dev-server": "^2.1.0-beta.11",
+    "webpack-merge": "^0.17.0"
+  }
+}
