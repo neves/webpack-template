@@ -1,6 +1,8 @@
 webpack = require 'webpack'
 
 module.exports = (webpackConfig) ->
+  dependencies: ['webpack-dev-server@^2.1.0-beta.11']
+
   output:
     filename: '[name].js' # without hash for dev
 

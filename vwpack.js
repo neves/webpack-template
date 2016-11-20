@@ -1,8 +1,12 @@
+// 'webpack-merge@^0.17.0', 'better-log@^1.3.3',
 require('coffee-script/register')
 const merge = require('webpack-merge').smart
 
 function p (data) {
-  require('better-log')(data)
+  console.log()
+  require('better-log').setConfig({depth: 5})(data)
+  console.log()
+  return data
 }
 
 module.exports = env => {
@@ -16,5 +20,6 @@ module.exports = env => {
     }
     config = merge(config, current)
   }
-  return config
+  delete config.dependencies
+  return p(config)
 }
