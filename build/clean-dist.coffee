@@ -5,6 +5,6 @@ module.exports = (webpackConfig) ->
     new CleanWebpackPlugin('*', {
       root: webpackConfig.output.path # // must be absolute
       verbose: true
-      dry: true
+      dry: false
     })
   ]

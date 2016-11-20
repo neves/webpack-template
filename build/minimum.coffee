@@ -1,4 +1,5 @@
 resolve = require('path').resolve
+webpack = require('webpack')
 
 module.exports =
   context: resolve __dirname, '../src' # // must be absolute
@@ -10,3 +11,7 @@ module.exports =
     publicPath: '/'
     # resolve:
     #   extensions: ['.js', '.coffee', '.vue']
+  plugins: [
+    new webpack.DefinePlugin
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+  ]

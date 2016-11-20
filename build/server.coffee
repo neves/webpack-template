@@ -1,7 +1,11 @@
-module.exports =
+webpack = require 'webpack'
+
+module.exports = (webpackConfig) ->
   output:
     filename: '[name].js' # without hash for dev
+
   devServer:
+    contentBase: webpackConfig.context + '/static'
     clientLogLevel: 'warning'
     noInfo: true # https://webpack.js.org/configuration/dev-server/#devserver-noinfo-
     watchOptions:
