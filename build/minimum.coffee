@@ -6,7 +6,7 @@ module.exports =
     app: ['./index.js']
   output:
     path: resolve __dirname, '../dist' # must be absolute
-    filename: '[name].js'
+    filename: '[name].[chunkhash:7].js'
     publicPath: '/'
     # resolve:
     #   extensions: ['.js', '.coffee', '.vue']

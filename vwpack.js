@@ -11,6 +11,9 @@ module.exports = env => {
   var config = {}
   for (let module of modules) {
     let current = require(`./build/${module}`)
+    if (current instanceof Function) {
+      current = current(config)
+    }
     config = merge(config, current)
   }
   return config
