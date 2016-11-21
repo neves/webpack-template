@@ -1,5 +1,8 @@
 module.exports = [
   'base'
-  'images'
   'html-index'
+  'css'
+  'sass'
+  'images'
+  'vue'
 ]

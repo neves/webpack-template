@@ -7,3 +7,6 @@ console.log('index.js', ENV)
 // importando css pelo javascript para poder gerar vendor, não funciona se importado dentro do css
 import 'reset-css'
 import './app.css'
+import './app.scss'
+
+import './app'
