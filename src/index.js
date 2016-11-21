@@ -8,6 +8,7 @@ console.log('index.js', ENV)
 import 'reset-css'
 import './app.css'
 import './app.scss'
+import './app.less'
 
 import './routes'
 import './app'

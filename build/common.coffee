@@ -3,6 +3,8 @@ module.exports = [
   'html-index'
   'css'
   'sass'
+  'less'
+  'stylus'
   'images'
   'vue'
   'coffee'
