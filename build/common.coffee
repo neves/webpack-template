@@ -5,4 +5,5 @@ module.exports = [
   'sass'
   'images'
   'vue'
+  'coffee'
 ]

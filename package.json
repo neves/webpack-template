@@ -11,6 +11,7 @@
   "devDependencies": {
     "better-log": "^1.3.3",
     "clean-webpack-plugin": "^0.1.14",
+    "coffee-loader": "^0.7.2",
     "coffee-script": "^1.11.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.0",

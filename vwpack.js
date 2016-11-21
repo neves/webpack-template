@@ -40,6 +40,7 @@ module.exports = env => {
     log(name)
     config = merge(config, conf)
   }
+  console.log(config.dependencies.sort().join(' '))
   delete config.dependencies
   return p(config)
 }

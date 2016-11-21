@@ -4,8 +4,7 @@ webpack = require 'webpack'
 module.exports = ({devtool}) ->
   dependencies: ['vue-loader@^9.9.5']
 
-  resolve:
-    extensions: ['.vue']
+  resolve: extensions: ['.vue']
   # https://github.com/vuejs/vue-loader/blob/master/docs/en/configurations/extract-css.md#webpack-2x-210-beta25
   module:
     rules: [

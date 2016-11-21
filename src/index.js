@@ -9,4 +9,5 @@ import 'reset-css'
 import './app.css'
 import './app.scss'
 
+import './routes'
 import './app'
