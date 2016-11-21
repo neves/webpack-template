@@ -3,4 +3,5 @@ module.exports = [
   'vendor'
   'clean-dist'
   'copy-static'
+  'progress'
 ]

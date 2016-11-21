@@ -1,7 +1,13 @@
 // 'webpack-merge@^0.17.0', 'better-log@^1.3.3', "coffee-script": "^1.11.1", "nodemon": "^1.11.0"
 require('coffee-script/register')
 const WebpackMerge = require('webpack-merge')
-const log = require('better-log').setConfig({depth: 5})
+const betterLog = require('better-log').setConfig({depth: 5})
+
+function log (data) {
+  if (process.env.DEBUG) {
+    betterLog(data)
+  }
+}
 
 function merge(a, b) {
   if (b instanceof Function) {
@@ -11,15 +17,16 @@ function merge(a, b) {
 }
 
 function p (data) {
-  console.log("\n--------------------------------------------------------------------------------\n")
+  log("\n--------------------------------------------------------------------------------\n")
   log(data)
-  console.log("\n--------------------------------------------------------------------------------\n")
+  log("\n--------------------------------------------------------------------------------\n")
   return data
 }
 
 function concat(modules) {
   var confs = []
   for (let module of modules) {
+    if (module === undefined) continue
     let conf = require(`./build/${module}`)
     if (Array.isArray(conf)) {
       conf = concat(conf)
@@ -40,7 +47,8 @@ module.exports = env => {
     log(name)
     config = merge(config, conf)
   }
-  console.log(config.dependencies.sort().join(' '))
+
+  log(config.dependencies.sort().join(' '))
   delete config.dependencies
   return p(config)
 }

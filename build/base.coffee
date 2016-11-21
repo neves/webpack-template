@@ -5,6 +5,8 @@ module.exports =
   dependencies: ['webpack@^2.1.0-beta.27']
 
   context: resolve __dirname, '../src' # // must be absolute
+  stats:
+    children: false # hide Child hidden modules messages
 
   entry:
     app: ['./index.js']
