@@ -6,6 +6,7 @@ module.exports = [
   'less'
   'stylus'
   'images'
+  'fonts'
   'vue'
   'coffee'
   'yml'

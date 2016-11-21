@@ -37,6 +37,7 @@
     "yml-loader": "^1.1.0"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "reset-css": "^2.2.0",
     "vue": "^2.0.8"
   }

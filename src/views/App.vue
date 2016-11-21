@@ -5,7 +5,8 @@
   <ol>
     <li>TODO</li>
   </ol>
-  <coffee>
+  <coffee />
+  <i class="fa fa-user"></i>
 </div>
 </template>
 
