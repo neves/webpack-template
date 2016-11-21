@@ -11,4 +11,5 @@ module.exports = ({context}) ->
       test: /\.js$/
       loader: 'babel-loader'
       include: [context]
+      options: cacheDirectory: true
     ]

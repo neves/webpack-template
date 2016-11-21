@@ -1,5 +1,5 @@
 module.exports = [
-  'common'
+  'webpack.common'
   'vendor'
   'clean-dist'
   'copy-static'

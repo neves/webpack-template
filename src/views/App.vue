@@ -4,6 +4,7 @@
   <input v-model="msg">
   <ol>
     <li>TODO</li>
+    <li>Done</li>
   </ol>
   <coffee />
   <i class="fa fa-user"></i>

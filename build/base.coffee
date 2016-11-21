@@ -1,5 +1,5 @@
 resolve = require('path').resolve
-webpack = require('webpack')
+webpack = require 'webpack'
 
 module.exports =
   dependencies: ['webpack@^2.1.0-beta.27']
