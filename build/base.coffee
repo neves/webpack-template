@@ -18,7 +18,7 @@ module.exports =
       'node_modules'
       resolve __dirname, '../src' # add src to include_path
     ]
-    extensions: ['.js', '.json']
+    extensions: ['.js']
 
   plugins: [
     new webpack.DefinePlugin

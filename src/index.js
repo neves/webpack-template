@@ -11,3 +11,5 @@ import './app.scss'
 
 import './routes'
 import './app'
+import './config.yml'
+require('./config')

@@ -6,4 +6,6 @@ module.exports = [
   'images'
   'vue'
   'coffee'
+  'yml'
+  'json'
 ]

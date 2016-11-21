@@ -1,0 +1,13 @@
+default: &default
+  title: WebPack Vue
+
+development:
+  <<: *default
+  api_url: http://dev.api.url/
+
+production:
+  <<: *default
+  api_url: http://api.url/
+
+test:
+  <<: *default
