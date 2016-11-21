@@ -1,5 +1,6 @@
 module.exports = [
   'base'
+  'babel'
   'html-index'
   'css'
   'sass'
