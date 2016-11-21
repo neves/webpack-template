@@ -1,11 +1,7 @@
 <template lang="pug">
 .v-coffee
-  h2 {{ msg }}
+  h2 Coffee
 </template>
-
-<script lang="coffee">
-export default data: -> msg: 'Coffee'
-</script>
 
 <style lang="less">
 .v-coffee {

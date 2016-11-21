@@ -1,6 +1,7 @@
 module.exports = [
   'base'
   'babel'
+  'eslint'
   'html-index'
   'css'
   'sass'
