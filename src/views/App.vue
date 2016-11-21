@@ -5,11 +5,15 @@
   <ol>
     <li>TODO</li>
   </ol>
+  <coffee>
 </div>
 </template>
+
 <script>
+import Coffee from 'components/Coffee'
+
 export default {
-  components: {},
+  components: {Coffee},
   data () {
     return {
       msg: 'Hello!'
@@ -17,6 +21,7 @@ export default {
   }
 }
 </script>
+
 <style>
 .view-app h1 {
   font-weight: bold;
