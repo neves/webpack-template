@@ -1,7 +1,6 @@
-<template>
-<div class="v-coffee">
-  <h2>{{ msg }}</h2>
-</div>
+<template lang="pug">
+.v-coffee
+  h2 {{ msg }}
 </template>
 
 <script lang="coffee">
