@@ -1,6 +1,19 @@
 ExtractTextPlugin = require 'extract-text-webpack-plugin'
 webpack = require 'webpack'
 
+extract = (loader, devtool, query = {}) ->
+  query.sourceMap = !!devtool
+
+  ExtractTextPlugin.extract
+    fallbackLoader: 'vue-style-loader'
+    loader: [
+      loader: 'css-loader'
+      query: sourceMap: !!devtool
+    ,
+      loader: "#{loader}-loader"
+      query: query
+    ]
+
 module.exports = ({devtool}) ->
   dependencies: ['vue-loader@^9.9.5']
 
@@ -18,25 +31,8 @@ module.exports = ({devtool}) ->
               loader: 'css-loader'
               query: sourceMap: !!devtool
 
-          scss: ExtractTextPlugin.extract
-            fallbackLoader: 'vue-style-loader'
-            loader: [
-              loader: 'css-loader'
-              query: sourceMap: !!devtool
-            ,
-              loader: 'sass-loader'
-              query: sourceMap: !!devtool
-            ]
-
-          sass: ExtractTextPlugin.extract
-            fallbackLoader: 'vue-style-loader'
-            loader: [
-              loader: 'css-loader'
-              query: sourceMap: !!devtool
-            ,
-              loader: 'sass-loader'
-              query:
-                sourceMap: !!devtool
-                indentedSyntax: true
-            ]
+          scss:   extract 'sass',   devtool
+          sass:   extract 'sass',   devtool, indentedSyntax: true
+          less:   extract 'less',   devtool
+          stylus: extract 'stylus', devtool
     ]
