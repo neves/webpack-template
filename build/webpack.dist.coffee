@@ -1,7 +1,7 @@
-module.exports = require('./vwpack') ({env}) -> [
-  # devtool: 'source-map'
+module.exports = require('./vwpack') ({ENV}) -> [
+  devtool: 'source-map' if ENV.sourcemap
   'paths'
-  'paths-hash' if env.hash
+  'paths-hash' if ENV.hash
   'webpack.common'
 
   'plugins/vendor'

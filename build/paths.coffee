@@ -1,5 +1,5 @@
 module.exports =
-  env:
+  ENV:
     js:   '[name].js'
     css:  '[name].css'
     img:  'img/[name].[ext]'

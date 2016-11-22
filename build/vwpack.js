@@ -45,9 +45,9 @@ function concat(modules) {
   return confs
 }
 
-function vwpack (env = {}, modules = []) {
-  log(env)
-  var config = {env}
+function vwpack (ENV = {}, modules = []) {
+  log(ENV)
+  var config = {ENV}
   if (modules instanceof Function) {
     modules = modules(config)
   }
@@ -60,8 +60,8 @@ function vwpack (env = {}, modules = []) {
 
   log(config.dependencies.sort().join(' '))
   delete config.dependencies
-  delete config.env
+  delete config.ENV
   return p(config)
 }
 
-module.exports = modules => env => vwpack(env, modules)
+module.exports = modules => ENV => vwpack(ENV, modules)

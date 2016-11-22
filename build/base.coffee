@@ -1,7 +1,7 @@
 resolve = require('path').resolve
 webpack = require 'webpack'
 
-module.exports = ({env}) ->
+module.exports = ({ENV}) ->
   dependencies: ['webpack@^2.1.0-beta.27']
 
   context: resolve __dirname, '../src' # // must be absolute
@@ -13,7 +13,8 @@ module.exports = ({env}) ->
 
   output:
     path: resolve __dirname, '../dist' # must be absolute
-    filename: env.js
+    filename: ENV.js
+    publicPath: '/'
 
   resolve:
     modules: [
