@@ -1,6 +1,6 @@
 module.exports = [
-  'source-map' # precisa vir antes para definir devtool antes de css, sass, etc referenciarem
+  devtool: 'eval-source-map' # https://webpack.js.org/configuration/devtool/
   'webpack.common'
   'server'
-  'dashboard'
+  'plugins/dashboard'
 ]

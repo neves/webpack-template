@@ -1,10 +1,11 @@
 webpack = require 'webpack'
 
-module.exports = ({context}) ->
+module.exports = ({context, devtool}) ->
   dependencies: ['webpack-dev-server@^2.1.0-beta.11']
 
   output:
     filename: '[name].js' # without hash for dev
+    publicPath: if devtool then 'http://0.0.0.0:8080/' else '/'
 
   devServer:
     contentBase: context + '/static'

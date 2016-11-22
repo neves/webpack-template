@@ -25,24 +25,36 @@ function p (data) {
 
 function concat(modules) {
   var confs = []
-  for (let module of modules) {
+  for (let index = 0; index < modules.length; index++) {
+    let module = modules[index]
+
     if (module === undefined) continue
-    let conf = require(`./build/${module}`)
-    if (Array.isArray(conf)) {
-      conf = concat(conf)
-      confs = Object.assign(confs, conf)
+
+    if (typeof module === 'string') {
+      let conf = require(`./${module}`)
+      if (Array.isArray(conf)) {
+        conf = concat(conf)
+        confs = Object.assign(confs, conf)
+      } else {
+        confs[module] = conf
+      }
     } else {
-      confs[module] = conf
+      confs[index] = module
     }
   }
   return confs
 }
 
 module.exports = env => {
-  const configFile = `./build/webpack.${env}`
-  const modules = require(configFile)
+  const configFile = `./webpack.${env}`
+  let modules = require(configFile)
+  if (modules instanceof Function) {
+    modules = modules(env)
+  }
   let confs = concat(modules)
-  var config = {}
+  var config = {
+
+  }
   for (let [name, conf] of Object.entries(confs)) {
     log(name)
     config = merge(config, conf)

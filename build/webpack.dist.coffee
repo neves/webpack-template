@@ -1,8 +1,10 @@
 module.exports = [
+  # devtool: 'source-map'
   'webpack.common'
-  'vendor'
-  'clean-dist'
-  'copy-static'
-  'progress'
-  'unused'
+
+  'plugins/vendor'
+  'plugins/clean-dist'
+  'plugins/copy-static'
+  'plugins/progress'
+  'plugins/unused'
 ]
