@@ -7,7 +7,8 @@
     "start": "clear && nodemon node_modules/.bin/webpack-dev-server -- --hot --env dev || true",
     "build": "clear && NODE_ENV=production webpack --env dist || true",
     "dist": "clear && NODE_ENV=production webpack -p --env dist || true",
-    "lint": "clear && eslint --ext js,vue --format=node_modules/eslint-codeframe-formatter ./src/ || true"
+    "lint": "clear && eslint --ext js,vue --format=node_modules/eslint-codeframe-formatter ./src/ || true",
+    "dash": "webpack-dashboard -- node_modules/.bin/webpack-dev-server --hot --env dev || true"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -46,6 +47,7 @@
     "url-loader": "^0.5.7",
     "vue-loader": "^9.9.5",
     "webpack": "^2.1.0-beta.27",
+    "webpack-dashboard": "^0.2.0",
     "webpack-dev-server": "^2.1.0-beta.11",
     "webpack-merge": "^0.17.0",
     "yml-loader": "^1.1.0"
