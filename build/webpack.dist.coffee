@@ -4,4 +4,5 @@ module.exports = [
   'clean-dist'
   'copy-static'
   'progress'
+  'unused'
 ]
