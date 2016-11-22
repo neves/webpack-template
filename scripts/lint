@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+clear
+eslint --ext js,vue --format=node_modules/eslint-codeframe-formatter ./src/

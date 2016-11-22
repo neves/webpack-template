@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# https://github.com/testdouble/scripty
+clear
+nodemon node_modules/.bin/webpack-dev-server --  --config ./build/webpack.dev.coffee --hot

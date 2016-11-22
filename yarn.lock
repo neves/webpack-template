@@ -3257,7 +3257,7 @@ lodash.toplainobject@^3.0.0:
     lodash._basecopy "^3.0.0"
     lodash.keysin "^3.0.0"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.2, lodash@^4.16.4, lodash@^4.2.0, lodash@^4.3.0:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.2, lodash@^4.16.4, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.8.2:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42"
 
@@ -4742,6 +4742,14 @@ sax@0.5.x:
 sax@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
+
+scripty@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/scripty/-/scripty-1.7.0.tgz#4c2fc1c747a862be4ab7e5bf350ede11e743f8ed"
+  dependencies:
+    async "^1.5.2"
+    glob "^7.0.3"
+    lodash "^4.8.2"
 
 select-hose@^2.0.0:
   version "2.0.0"

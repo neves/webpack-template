@@ -4,6 +4,7 @@
   "watch": [
     "build/",
     ".babelrc",
+    ".eslintrc.js",
     "package.json",
     "nodemon.json",
     "yarn.lock"

@@ -4,11 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "clear && nodemon node_modules/.bin/webpack-dev-server --  --config ./build/webpack.dev.coffee --hot --env dev || true",
-    "build": "clear && NODE_ENV=production webpack --config ./build/webpack.dist.coffee --env dist || true",
-    "dist": "clear && NODE_ENV=production webpack --config ./build/webpack.dist.coffee -p --env dist || true",
-    "lint": "clear && eslint --ext js,vue --format=node_modules/eslint-codeframe-formatter ./src/ || true",
-    "dash": "NODE_ENV=development webpack-dashboard -- node_modules/.bin/webpack-dev-server  --config ./build/webpack.dev.coffee --hot --env dev || true"
+    "start": "scripty",
+    "build": "scripty",
+    "dist": "scripty",
+    "lint": "scripty",
+    "dash": "scripty"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -41,6 +41,7 @@
     "pug": "^2.0.0-beta6",
     "pug-loader": "^2.3.0",
     "sass-loader": "^4.0.2",
+    "scripty": "^1.7.0",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.3.1",

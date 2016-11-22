@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+clear
+NODE_ENV=development webpack-dashboard -- node_modules/.bin/webpack-dev-server --config ./build/webpack.dev.coffee --hot
