@@ -45,16 +45,10 @@ function concat(modules) {
   return confs
 }
 
-module.exports = env => {
-  const configFile = `./webpack.${env}`
-  let modules = require(configFile)
-  if (modules instanceof Function) {
-    modules = modules(env)
-  }
+function vwpack (env, modules) {
+  log(env)
   let confs = concat(modules)
-  var config = {
-
-  }
+  var config = {env: env}
   for (let [name, conf] of Object.entries(confs)) {
     log(name)
     config = merge(config, conf)
@@ -62,5 +56,8 @@ module.exports = env => {
 
   log(config.dependencies.sort().join(' '))
   delete config.dependencies
+  delete config.env
   return p(config)
 }
+
+module.exports = modules => env => vwpack(env, modules)

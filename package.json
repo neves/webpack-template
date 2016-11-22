@@ -4,11 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "clear && nodemon node_modules/.bin/webpack-dev-server -- --hot --env dev || true",
-    "build": "clear && NODE_ENV=production webpack --env dist || true",
-    "dist": "clear && NODE_ENV=production webpack -p --env dist || true",
+    "start": "clear && nodemon node_modules/.bin/webpack-dev-server --  --config ./build/webpack.dev.coffee --hot --env dev || true",
+    "build": "clear && NODE_ENV=production webpack --config ./build/webpack.dist.coffee --env dist || true",
+    "dist": "clear && NODE_ENV=production webpack --config ./build/webpack.dist.coffee -p --env dist || true",
     "lint": "clear && eslint --ext js,vue --format=node_modules/eslint-codeframe-formatter ./src/ || true",
-    "dash": "NODE_ENV=development webpack-dashboard -- node_modules/.bin/webpack-dev-server --hot --env dev || true"
+    "dash": "NODE_ENV=development webpack-dashboard -- node_modules/.bin/webpack-dev-server  --config ./build/webpack.dev.coffee --hot --env dev || true"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",

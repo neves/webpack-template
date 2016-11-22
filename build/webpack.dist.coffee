@@ -1,4 +1,4 @@
-module.exports = [
+module.exports = require('./vwpack') [
   # devtool: 'source-map'
   'webpack.common'
 
