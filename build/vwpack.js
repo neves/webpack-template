@@ -45,10 +45,14 @@ function concat(modules) {
   return confs
 }
 
-function vwpack (env, modules) {
+function vwpack (env = {}, modules = []) {
   log(env)
+  var config = {env}
+  if (modules instanceof Function) {
+    modules = modules(config)
+  }
   let confs = concat(modules)
-  var config = {env: env}
+
   for (let [name, conf] of Object.entries(confs)) {
     log(name)
     config = merge(config, conf)

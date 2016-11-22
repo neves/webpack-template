@@ -1,7 +1,7 @@
 ExtractTextPlugin = require 'extract-text-webpack-plugin'
 DEVELOPMENT = process.env.NODE_ENV is 'development'
 
-module.exports = ({devtool}) ->
+module.exports = ({devtool, env}) ->
   dependencies: [
     'css-loader@^0.26.0',
     'style-loader@^0.13.1'
@@ -19,7 +19,7 @@ module.exports = ({devtool}) ->
 
   plugins: [
     new ExtractTextPlugin
-      filename: '[name].[contenthash:7].css'
+      filename: env.css
       allChunks: true
       disable: DEVELOPMENT
   ]

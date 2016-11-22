@@ -1,6 +1,7 @@
 module.exports = [
   'base'
   'plugins/html-index'
+  'plugins/version'
 
   'loaders/babel'
   'loaders/eslint'

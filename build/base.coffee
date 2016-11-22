@@ -1,7 +1,7 @@
 resolve = require('path').resolve
 webpack = require 'webpack'
 
-module.exports =
+module.exports = ({env}) ->
   dependencies: ['webpack@^2.1.0-beta.27']
 
   context: resolve __dirname, '../src' # // must be absolute
@@ -13,7 +13,7 @@ module.exports =
 
   output:
     path: resolve __dirname, '../dist' # must be absolute
-    filename: '[name].[chunkhash:7].js'
+    filename: env.js
 
   resolve:
     modules: [

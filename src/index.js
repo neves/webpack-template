@@ -19,4 +19,5 @@ import './app.less'
 import './routes'
 import './app'
 import './config.yml'
-require('./config')
+console.info('config.json:', require('./config.json'))
+console.info('config.js:', require('./config.coffee'))

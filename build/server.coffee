@@ -12,6 +12,10 @@ module.exports = ({context, devtool}) ->
     clientLogLevel: 'warning'
     noInfo: true # https://webpack.js.org/configuration/dev-server/#devserver-noinfo-
     host: '0.0.0.0'
+    headers:
+      "Access-Control-Allow-Origin": "*"
+      "Access-Control-Allow-Methods": "GET"
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
     watchOptions:
       aggregateTimeout: 1
       ignored: /node_modules/
