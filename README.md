@@ -1,3 +1,7 @@
+# Docs
+
+- https://webpack.js.org/guides/migrating/
+
 # Projetos Semelhantes
 
 - https://github.com/mdreizin/webpack-config
