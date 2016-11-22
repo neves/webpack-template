@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+clear
+live-server ./dist --host 0.0.0.0 --cors --no-browser

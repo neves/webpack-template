@@ -8,7 +8,8 @@
     "build": "scripty",
     "dist": "scripty",
     "lint": "scripty",
-    "dash": "scripty"
+    "dash": "scripty",
+    "live": "scripty"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -35,6 +36,7 @@
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "live-server": "^1.1.0",
     "node-sass": "^3.13.0",
     "nodemon": "^1.11.0",
     "progress-bar-webpack-plugin": "^1.9.0",
