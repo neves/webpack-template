@@ -46,6 +46,7 @@ function concat(modules) {
 }
 
 function vwpack (ENV = {}, modules = []) {
+  ENV.NODE_ENV = process.env.NODE_ENV
   log(ENV)
   var config = {ENV}
   if (modules instanceof Function) {
