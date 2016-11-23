@@ -13,6 +13,10 @@ function isString (val) {
   return typeof val == 'string'
 }
 
+function isFunction (f) {
+  return f instanceof Function
+}
+
 function requireAll (modules) {
   return modules.map(module => isString(module) ? require(`./${module}`) : module)
 }
@@ -23,6 +27,9 @@ function requireNested (modules) {
 
 function combine (ENV = {}, modules) {
   ENV.NODE_ENV = process.env.NODE_ENV
+  if (isFunction(modules)) {
+    modules = modules(ENV)
+  }
   modules.unshift({ENV})
   modules = requireAll(modules)
   modules = requireNested(modules)

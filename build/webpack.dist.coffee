@@ -1,4 +1,4 @@
-module.exports = require('./vwpack') ({ENV}) -> [
+module.exports = require('./webpack.combine') (ENV) -> [
   devtool: 'source-map' if ENV.sourcemap
   'paths'
   'paths-hash' if ENV.hash
