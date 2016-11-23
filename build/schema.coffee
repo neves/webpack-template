@@ -2,14 +2,16 @@
 # https://webpack.js.org/configuration/
 module.exports =
   context: null
+  devtool: false
   entry: {}
   output: {}
-  module:
-    rules: []
   resolve:
     modules: []
     extensions: []
     alias: {}
   devServer: {}
-  devtool: null
+  stats: {}
+  module:
+    rules: []
   plugins: []
+  dependencies: []
