@@ -1,4 +1,5 @@
 module.exports = [
+  'schema'
   'base'
   'plugins/html-index'
   'plugins/version'

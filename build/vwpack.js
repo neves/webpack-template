@@ -16,13 +16,6 @@ function merge(a, b) {
   return WebpackMerge.smart(a, b)
 }
 
-function p (data) {
-  log("\n--------------------------------------------------------------------------------\n")
-  log(data)
-  log("\n--------------------------------------------------------------------------------\n")
-  return data
-}
-
 function concat(modules) {
   var confs = []
   for (let index = 0; index < modules.length; index++) {
@@ -59,10 +52,13 @@ function vwpack (ENV = {}, modules = []) {
     config = merge(config, conf)
   }
 
-  log(config.dependencies.sort().join(' '))
+  // log(config.dependencies.sort().join(' '))
+  log("\n--------------------------------------------------------------------------------\n")
+  log(data)
+  log("\n--------------------------------------------------------------------------------\n")
   delete config.dependencies
   delete config.ENV
-  return p(config)
+  return config
 }
 
 module.exports = modules => ENV => vwpack(ENV, modules)
