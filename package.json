@@ -55,7 +55,7 @@
     "webpack-dashboard": "^0.2.0",
     "webpack-dev-server": "^2.1.0-beta.11",
     "webpack-merge": "^0.17.0",
-    "webpack-merge-plus": "^0.0.2",
+    "webpack-merge-plus": "^0.1.0",
     "yml-loader": "^1.1.0"
   },
   "dependencies": {

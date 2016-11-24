@@ -5739,9 +5739,9 @@ webpack-dev-server@^2.1.0-beta.11:
     webpack-dev-middleware "^1.4.0"
     yargs "^6.0.0"
 
-webpack-merge-plus@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/webpack-merge-plus/-/webpack-merge-plus-0.0.2.tgz#fa25b0e508447eb2bd5ffabae3bade74166b04c4"
+webpack-merge-plus@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/webpack-merge-plus/-/webpack-merge-plus-0.1.0.tgz#333838f3665b6b52b13db0c5d54ebfd452d2037a"
   dependencies:
     webpack-merge "^0.17.0"
 
